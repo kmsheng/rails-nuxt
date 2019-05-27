@@ -5,10 +5,10 @@
         <li>Email: test@example.com</li>
         <li>Password: password</li>
       </ul>
-      <v-card v-if="$auth.state.loggedIn">
+      <v-card v-if="$auth.$state.loggedIn">
         <v-alert type="error" :value="error">{{error}}</v-alert>
         <v-card-text>
-          Logged in as {{$auth.state.user.email}}
+          Logged in as {{$auth.$state.user.email}}
         </v-card-text>
         <v-card-actions>
           <v-btn @click="logout">Log out</v-btn>
