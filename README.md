@@ -18,6 +18,7 @@ yarn --cwd './frontend' dev
 
 # Production
 ```shell
+# Build production dependencies
 ./backend/bin/bundle
 yarn --cwd './frontend' build
 
