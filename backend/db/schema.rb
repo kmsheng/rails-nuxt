@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190527011027) do
+ActiveRecord::Schema.define(version: 20190527011223) do
 
   create_table "examples", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20190527011027) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "jwt_blacklists", force: :cascade do |t|
+    t.string   "jti"
+    t.datetime "exp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "jwt_blacklists", ["jti"], name: "index_jwt_blacklists_on_jti"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
