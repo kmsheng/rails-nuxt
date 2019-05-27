@@ -18,8 +18,11 @@ yarn --cwd './frontend' dev
 
 # Production
 ```shell
-bundle exec rake webpacker:compile
-SECRET_KEY_BASE=secret RAILS_SERVE_STATIC_FILES=1 rails server -e production
+./backend/bin/bundle
+yarn --cwd './frontend' build
+
+SECRET_KEY_BASE=secret JWT_SECRET=secret RAILS_SERVE_STATIC_FILES=1 ./backend/bin/rails server -e production -p 8080
+yarn --cwd './frontend' start
 ```
 
 ## Environment
