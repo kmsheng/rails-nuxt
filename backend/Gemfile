@@ -8,6 +8,10 @@ gem 'rails', '4.2.11.1'
 # Set CORS policy
 gem 'rack-cors'
 
+# Authentication solution
+gem 'devise'
+gem 'devise-jwt'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.13'
 # Use SCSS for stylesheets
