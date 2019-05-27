@@ -10,7 +10,7 @@ Sample rails project integrates with Nuxt.js
 yarn --cwd './frontend'
 
 # Run ROR
-/backend/bin/rails server -p 8080
+./backend/bin/rails server -p 8080
 
 # Launch webpack-dev-server
 yarn --cwd './frontend' dev
