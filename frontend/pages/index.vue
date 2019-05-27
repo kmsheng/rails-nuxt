@@ -1,5 +1,6 @@
 <template>
   <v-layout>
+    <h1>List Items</h1>
     <v-flex>
       <v-list>
         <v-list-tile v-for="example in examples" :key="example.id" :class="example.colour">
