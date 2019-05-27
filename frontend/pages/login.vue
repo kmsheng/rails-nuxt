@@ -1,6 +1,10 @@
 <template>
   <v-layout>
     <v-flex>
+      <ul>
+        <li>Email: test@example.com</li>
+        <li>Password: password</li>
+      </ul>
       <v-card v-if="$auth.state.loggedIn">
         <v-alert type="error" :value="error">{{error}}</v-alert>
         <v-card-text>
